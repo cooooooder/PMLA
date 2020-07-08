@@ -7,7 +7,6 @@
 using namespace pmla;
 
 int main() {
-
     al_102_binary_tree_level_order_traversal_test::test();
     return 0;
 }
