@@ -9,8 +9,7 @@ namespace pmla {
 
     class al_helper {
     public:
-
-        static void split(vector<string>& items, const string& src, const string& split_c);
+        static void split(vector<string>& items, const string& src, const char& split_c);
     };
 
 }
