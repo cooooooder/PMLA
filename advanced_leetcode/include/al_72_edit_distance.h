@@ -47,7 +47,36 @@ namespace pmla {
 class al_72_edit_distance {
 public:
     int min_edit_distance(string word1, string word2) {
+        int word1_length = word1.length();
+        int word2_length = word2.length();
+        if (word1_length == 0) {
+            return word2_length;
+        }
+        if (word2_length == 0) {
+            return word1_length;
+        }
+        vector<vector<int> > dp(word1_length + 1, vector<int>(word2_length + 1, 0));
+        // 针对第一行
+        for (int i = 1; i <= word1_length; i++) {
+            dp[0][i] = dp[0][i-1] + 1;
+        }
+        // 针对第一列
+        for (int i = 1; i <= word2_length; i++) {
+            dp[i][0] = dp[i-1][0] + 1;
+        }
 
+        for (int i = 1; i <= word1_length; i++) {
+            for (int j = 1; j <= word2_length; j++) {
+                if (word1[i-1] == word2[j-1]) {
+                    dp[i][j] = dp[i-1][j-1];
+                }
+                else {
+                    // 增加、删除、替换
+                    dp[i][j] = min(min(dp[i][j-1], dp[i-1][j]), dp[i-1][j-1]) + 1;
+                }
+            }
+        }
+        return dp[word1_length][word2_length];
     }
 };
 

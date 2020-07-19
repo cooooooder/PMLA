@@ -25,5 +25,10 @@ using namespace std;
 #include "al_implement_trie.h"
 #include "al_648_replace_words.h"
 #include "al_146_lru_cache.h"
+#include "al_72_edit_distance.h"
+#include "al_construct_tree_from_other_traversal.h"
+#include "al_permutation.h"
+#include "al_top_k_series.h"
+#include "al_course_schedule.h"
 
 #endif //PMLA_LEETCODE_H
