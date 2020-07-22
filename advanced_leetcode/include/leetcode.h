@@ -30,5 +30,7 @@ using namespace std;
 #include "al_permutation.h"
 #include "al_top_k_series.h"
 #include "al_course_schedule.h"
+#include "al_994_rotten_oranges.h"
+#include "al_93_restore_ip_address.h"
 
 #endif //PMLA_LEETCODE_H
