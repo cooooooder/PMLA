@@ -32,5 +32,6 @@ using namespace std;
 #include "al_course_schedule.h"
 #include "al_994_rotten_oranges.h"
 #include "al_93_restore_ip_address.h"
+#include "al_pigeonhole_principle.h"
 
 #endif //PMLA_LEETCODE_H
